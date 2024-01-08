@@ -1,4 +1,5 @@
 import Star from "./star";
+import Form from "./form";
 
 const RatingsCard = () => {
   return (
@@ -14,12 +15,11 @@ const RatingsCard = () => {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <form action="">
-        <input type="radio" />
-        <button>Button</button>
-      </form>
+      <Form />
     </div>
   );
 };
 
 export default RatingsCard;
+
+// bg-gradient-to-b from-[#181E27] via-[#232A34] to-[#232A34]
