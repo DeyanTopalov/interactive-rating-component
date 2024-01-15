@@ -1,11 +1,20 @@
-const RatingsInput = ({ id, value, label, onChange, isSelected }) => {
+const RatingsInput = ({
+  id,
+  value,
+  label,
+  onChange,
+  isSelected,
+  previousSelected,
+}) => {
   return (
     <label
       htmlFor={id}
-      className={`w-[2.625rem] md:w-[3.1875rem] h-[2.625rem] md:h-[3.1875rem] rounded-full flex items-center justify-center cursor-pointer  font-bold ${
+      className={`flex h-[2.625rem] w-[2.625rem] cursor-pointer items-center justify-center rounded-full font-bold md:h-[3.1875rem]  md:w-[3.1875rem] ${
         isSelected
-          ? "bg-clr-orange text-white"
-          : "bg-clr-dark-blue text-clr-medium-gray"
+          ? "text-clr-white bg-clr-orange"
+          : previousSelected
+            ? "bg-clr-medium-gray text-clr-pure-white"
+            : "bg-clr-dark-blue text-clr-medium-gray"
       }
       } `}
     >
@@ -15,7 +24,7 @@ const RatingsInput = ({ id, value, label, onChange, isSelected }) => {
         id={id}
         value={value}
         onChange={onChange}
-        className="appearance-none hidden"
+        className="hidden appearance-none"
         checked={isSelected}
       />
       {label}

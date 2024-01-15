@@ -16,29 +16,19 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      "clr-very-dark-blue": withOpacity("--very-dark-blue"),
-      "clr-dark-blue": withOpacity("--dark-blue"),
-      "clr-light-gray": withOpacity("--light-gray"),
-      "clr-medium-gray": withOpacity("--medium-gray"),
-      "clr-orange": withOpacity("--orange"),
-      "clr-pure-white": withOpacity("--pure-white"),
-    },
-    fontSize: {
-      "2.5xl": [
-        "1.75rem",
-        {
-          lineHeight: "2rem",
-          letterSpacing: "-0.01em",
-          fontWeight: "500",
-        },
-      ],
-      extend: {
-        backgroundImage: {
-          "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-          "gradient-conic":
-            "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        },
+    extend: {
+      colors: {
+        "clr-very-dark-blue": withOpacity("--very-dark-blue"),
+        "clr-dark-blue": withOpacity("--dark-blue"),
+        "clr-light-gray": withOpacity("--light-gray"),
+        "clr-medium-gray": withOpacity("--medium-gray"),
+        "clr-orange": withOpacity("--orange"),
+        "clr-pure-white": withOpacity("--pure-white"),
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
 
