@@ -4,22 +4,16 @@
 
 
 /* CSS Variables based on project design */
-:root {
-    --very-dark-blue: hsl(218, 11%, 8%);
-    --dark-blue: hsl(213, 19%, 18%);
-    --light-gray: hsl(216, 12%, 63%);
-    --medium-gray: hsl(217, 12%, 54%);
-    --orange: hsl(25, 97%, 53%);
-    --pure-white: hsl(0, 0%, 100%);
+@layer base {
+
+    :root {
+        --very-dark-blue: 218, 11%, 8%;
+        --dark-blue: 213, 19%, 18%;
+        --light-gray: 216, 12%, 63%;
+        --medium-gray: 217, 12%, 54%;
+        --orange: 25, 97%, 53%;
+        --pure-white: 0, 0%, 100%;
+
+    }
 
 }
-
-/* input[type="radio"]:checked+.radio_button,
-input[type="radio"]:focus+.radio_button {
-    background: var(--orange) !important;
-    color: white;
-}
-
-input[type="radio"] {
-    -webkit-appearance: none;
-} */
