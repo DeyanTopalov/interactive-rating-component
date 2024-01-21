@@ -1,14 +1,29 @@
 "use client";
 import RatingsInput from "./ratings-input";
 import Button from "./button";
+import RatingsModal from "./ratings-modal";
 import { useState } from "react";
+import RatingError from "./ratingerror";
 
 const Form = () => {
   const [selected, setSelected] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false); // Add state for tracking the error
 
   const handleRatingChange = (event) => {
     setSelected(Number(event.target.value));
-    console.log(event.target.value);
+    setError(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (selected === null) {
+      setError(true);
+    } else {
+      setShowModal(true); // Show the modal when the user clicks the submit button
+      setSubmitted(true); // Set the submitted state to true
+    }
   };
 
   const genarateRatingInputs = () => {
@@ -30,12 +45,16 @@ const Form = () => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <fieldset>
         <legend className="sr-only">Please select a rating</legend>
         <div className="flex justify-between">{genarateRatingInputs()}</div>
       </fieldset>
-      <Button text="Submit" />
+      <Button text="Submit" className="flex" />
+      {showModal && (
+        <RatingsModal onClose={() => setShowModal(false)} rating={selected} />
+      )}
+      {error && <RatingError />}
     </form>
   );
 };

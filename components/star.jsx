@@ -12,5 +12,3 @@ const Star = () => {
 };
 
 export default Star;
-
-// 16 / 30

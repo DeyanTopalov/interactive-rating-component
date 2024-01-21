@@ -10,7 +10,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="grid h-screen place-items-center  bg-clr-very-dark-blue ">
+      <body className="grid h-svh place-items-center bg-clr-very-dark-blue  md:h-screen ">
         <main
           className={`${overpass.className} app max-w-[90rem] px-6 antialiased`}
         >

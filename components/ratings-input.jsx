@@ -14,8 +14,8 @@ const RatingsInput = ({
           ? "text-clr-white bg-clr-orange"
           : previousSelected
             ? "bg-clr-medium-gray text-clr-pure-white"
-            : "bg-clr-dark-blue text-clr-medium-gray"
-      }
+            : "bg-clr-dark-blue text-clr-medium-gray hover:bg-clr-medium-gray hover:text-clr-pure-white"
+      } 
       } `}
     >
       <input
