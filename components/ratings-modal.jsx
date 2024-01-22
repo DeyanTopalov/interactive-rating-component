@@ -26,7 +26,7 @@ const RatingsModal = ({ onClose, rating }) => {
       id="modal-content"
       role="dialog"
       open={true}
-      className="modal fixed inset-0 max-w-[327px]  rounded-[15px] bg-gradient-to-b from-[#181E27] via-[#232A34] to-[#232A34] px-6 py-[34px] text-center md:max-w-[412px] md:rounded-[30px] md:px-8 md:py-[45px]"
+      className="modal fixed inset-0 max-w-[327px]  rounded-[15px] border-2 border-clr-dark-blue bg-gradient-to-b from-[#181E27] via-[#232A34] to-[#232A34] px-6 py-[34px] text-center shadow-lg md:max-w-[412px] md:rounded-[30px] md:px-8 md:py-[45px]"
     >
       <div className="modal-content grid place-content-center">
         <div className="mb-6 flex justify-center md:mb-8">
